@@ -109,7 +109,7 @@ class VentanaLista:
          self.master.destroy()
 
     def Reporte(self,lista):
-        f = open("C:/Users/Fernando Palacio/Desktop/Email.txt", 'w')
+        f = open("C:/Email.txt", 'w')
         numero = len(lista)
         for l in range(numero):
             f.write("From: " + lista["From"] + " " + "To: " + lista["To"] + " " + "Subject: " + lista["Subject"] + " " + "ID: " + lista['message-id'] + '\n')
@@ -128,7 +128,7 @@ class VentanaLista:
             d.value = lista["Subject"]
             d = ws.cell(row=l, column=5)
             d.value = lista['message-id']
-        wb.save('C:/Users/Fernando Palacio/Desktop/email.xlsx')
+        wb.save('C:/email.xlsx')
 
 def main():
     root = tk.Tk()
